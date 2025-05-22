@@ -1,103 +1,509 @@
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
+import { Download, DollarSign, Eye, ArrowRight, Github, Puzzle } from "lucide-react"
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { Button } from "@/components/ui/button"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+export default function LandingPage() {
+    return (
+        <div className="flex min-h-screen flex-col">
+            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <div className="container flex h-16 items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <Eye className="h-6 w-6 text-purple-500" />
+                        <span className="text-xl font-bold">OddsAware</span>
+                    </div>
+                    <nav className="hidden md:flex gap-6">
+                        <Link href="#features" className="text-sm font-medium hover:text-purple-500 transition-colors">
+                            Features
+                        </Link>
+                        <Link href="#sites" className="text-sm font-medium hover:text-purple-500 transition-colors">
+                            Supported Sites
+                        </Link>
+                        <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-500 transition-colors">
+                            How It Works
+                        </Link>
+                        <Link href="#getting-started" className="text-sm font-medium hover:text-purple-500 transition-colors">
+                            Getting Started
+                        </Link>
+                    </nav>
+                    <div className="flex items-center gap-4">
+                        <Link href="#donate">
+                            <Button variant="outline" size="sm" className="hidden md:flex">
+                                <DollarSign className="mr-2 h-4 w-4" />
+                                Donate
+                            </Button>
+                        </Link>
+                        <Link href="#download">
+                            <Button size="sm" className="bg-purple-500 hover:bg-purple-600">
+                                <Download className="mr-2 h-4 w-4" />
+                                Download
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+            </header>
+            <main className="flex-1">
+                <section className="py-20 md:py-32">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+                            <div className="flex flex-col justify-center space-y-4">
+                                <div className="space-y-2">
+                                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                                        See the <span className="text-purple-500">Real Odds</span> Behind Your Favorite Gambling Sites
+                                    </h1>
+                                    <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                                        OddsAware is a free Chrome extension that reveals the true odds behind popular gambling sites like
+                                        CSGORoll, Rain.gg, and CSGOGem.
+                                    </p>
+                                </div>
+                                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                                    <Link href="#download" id="download">
+                                        <Button size="lg" className="bg-purple-500 hover:bg-purple-600">
+                                            <Download className="mr-2 h-5 w-5" />
+                                            Download Extension
+                                        </Button>
+                                    </Link>
+                                    <Link href="https://github.com/oddsviewer/extension" target="_blank" rel="noopener noreferrer">
+                                        <Button variant="outline" size="lg">
+                                            <Github className="mr-2 h-5 w-5" />
+                                            View on GitHub
+                                        </Button>
+                                    </Link>
+                                </div>
+                                <div className="text-sm text-muted-foreground">Free and open source. No registration required.</div>
+                            </div>
+                            <div className="flex items-center justify-center">
+                                <div className="relative w-full max-w-[500px] overflow-hidden rounded-lg border bg-background shadow-xl">
+                                    <div className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2">
+                                        <div className="h-3 w-3 rounded-full bg-red-500" />
+                                        <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                                        <div className="h-3 w-3 rounded-full bg-green-500" />
+                                        <div className="ml-2 text-xs text-muted-foreground">csgoroll.com</div>
+                                    </div>
+                                    <div className="relative aspect-[16/9] bg-black">
+                                        <Image
+                                            src="/placeholder.svg?height=450&width=800"
+                                            alt="OddsViewer Chrome extension showing odds on a gambling site"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                            True Odds: 48.2%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="features" className="bg-muted py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                            <div className="space-y-2">
+                                <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                    Features
+                                </div>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Make Informed Decisions</h2>
+                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                    OddsViewer gives you the transparency you deserve when gambling online.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="rounded-full bg-purple-500/10 p-3">
+                                    <Eye className="h-6 w-6 text-purple-500" />
+                                </div>
+                                <h3 className="text-xl font-bold">Real-Time Odds</h3>
+                                <p className="text-center text-muted-foreground">
+                                    See the actual odds of winning as you play, not what the sites want you to believe.
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="rounded-full bg-purple-500/10 p-3">
+                                    <Puzzle className="h-6 w-6 text-purple-500" />
+                                </div>
+                                <h3 className="text-xl font-bold">Seamless Integration</h3>
+                                <p className="text-center text-muted-foreground">
+                                    Integrates naturally with all supported sites without disrupting your experience.
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="rounded-full bg-purple-500/10 p-3">
+                                    <ArrowRight className="h-6 w-6 text-purple-500" />
+                                </div>
+                                <h3 className="text-xl font-bold">Instant Activation</h3>
+                                <p className="text-center text-muted-foreground">
+                                    Works immediately after installation with no configuration required.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                            <div className="space-y-2">
+                                <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                    How It Works
+                                </div>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The Technology Behind OddsAware</h2>
+                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                    Our extension uses advanced algorithms to give you the real odds behind gambling sites.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2">
+                            <div className="flex flex-col space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="flex items-center gap-2">
+                                    <div className="rounded-full bg-purple-500/10 p-2">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="h-6 w-6 text-purple-500"
+                                        >
+                                            <path d="M3 6h18" />
+                                            <path d="M7 12h10" />
+                                            <path d="M10 18h4" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold">RTP Calculation</h3>
+                                </div>
+                                <p className="text-muted-foreground">
+                                    We scan the page for all possible items you could get from a case or game and calculate the Return to
+                                    Player (RTP) based on this data. This gives you a clear picture of the actual value you can expect to
+                                    receive over time.
+                                </p>
+                                <div className="rounded-md bg-muted p-4">
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-sm font-medium">Items scanned</span>
+                                        <span className="text-sm font-medium">RTP calculated</span>
+                                    </div>
+                                    <div className="mt-2 h-2.5 w-full rounded-full bg-muted-foreground/20">
+                                        <div className="h-2.5 rounded-full bg-purple-500" style={{ width: "67%" }}></div>
+                                    </div>
+                                    <div className="mt-1 flex items-center justify-between">
+                                        <span className="text-xs text-muted-foreground">0%</span>
+                                        <span className="text-xs font-medium text-purple-500">67% RTP</span>
+                                        <span className="text-xs text-muted-foreground">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-col space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="flex items-center gap-2">
+                                    <div className="rounded-full bg-purple-500/10 p-2">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="h-6 w-6 text-purple-500"
+                                        >
+                                            <path d="M12 22V2" />
+                                            <path d="m9 5 3-3 3 3" />
+                                            <path d="M5 12H2" />
+                                            <path d="M22 12h-3" />
+                                            <path d="m5 5 1.5 1.5" />
+                                            <path d="M17.5 17.5 19 19" />
+                                            <path d="M5 19l1.5-1.5" />
+                                            <path d="M17.5 6.5 19 5" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold">Chance at Profit</h3>
+                                </div>
+                                <p className="text-muted-foreground">
+                                    We combine the odds of winning with the average multiplier you can expect to show your real chance of
+                                    making a profit. This helps you make informed decisions about which games offer the best value.
+                                </p>
+                                <div className="mt-4 grid grid-cols-2 gap-4">
+                                    <div className="rounded-md bg-muted p-3 text-center">
+                                        <div className="text-2xl font-bold text-purple-500">32%</div>
+                                        <div className="text-xs text-muted-foreground">Win Probability</div>
+                                    </div>
+                                    <div className="rounded-md bg-muted p-3 text-center">
+                                        <div className="text-2xl font-bold text-purple-500">2.1x</div>
+                                        <div className="text-xs text-muted-foreground">Avg. Multiplier</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sites" className="py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                            <div className="space-y-2">
+                                <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                    Supported Sites
+                                </div>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Works With Your Favorite Sites</h2>
+                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                    OddsViewer currently supports these popular gambling sites, with more coming soon.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-3">
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="CSGORoll logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-bold">CSGORoll</h3>
+                                <p className="text-center text-muted-foreground">
+                                    Full support for all games including Crash, Roulette, and Case Battles.
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="Rain.gg logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-bold">Rain.gg</h3>
+                                <p className="text-center text-muted-foreground">
+                                    Supports all Rain.gg games with detailed odds breakdowns.
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="CSGOGem logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-bold">CSGOGem</h3>
+                                <p className="text-center text-muted-foreground">
+                                    Full integration with all CSGOGem gambling features.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="rounded-lg border bg-background p-4 text-center">
+                                <p className="text-muted-foreground">
+                                    <span className="font-medium">Coming soon:</span> DuelBits, CSGOEmpire, Rollbit, and more!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="getting-started" className="bg-muted py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+                            <div className="flex items-center justify-center">
+                                <div className="space-y-4">
+                                    <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                        Getting Started
+                                    </div>
+                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                                        Simple, Transparent, Effective
+                                    </h2>
+                                    <ul className="space-y-4">
+                                        <li className="flex items-start gap-2">
+                                            <div className="rounded-full bg-purple-500/20 p-1">
+                                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                                                    1
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold">Install the Extension</h3>
+                                                <p className="text-muted-foreground">
+                                                    Download and install OddsViewer from our website or the Chrome Web Store.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <div className="rounded-full bg-purple-500/20 p-1">
+                                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                                                    2
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold">Visit Supported Sites</h3>
+                                                <p className="text-muted-foreground">
+                                                    Go to any supported gambling site and start playing as normal.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <div className="rounded-full bg-purple-500/20 p-1">
+                                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                                                    3
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold">See Real Odds</h3>
+                                                <p className="text-muted-foreground">
+                                                    OddsViewer automatically displays the true odds directly on the page.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <div className="rounded-full bg-purple-500/20 p-1">
+                                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500 text-xs font-bold text-white">
+                                                    4
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold">Make Better Decisions</h3>
+                                                <p className="text-muted-foreground">
+                                                    Use the real odds information to make more informed gambling decisions.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+                                        <Link href="#download">
+                                            <Button size="lg" className="bg-purple-500 hover:bg-purple-600">
+                                                <Download className="mr-2 h-5 w-5" />
+                                                Download Now
+                                            </Button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-center">
+                                <div className="relative w-full max-w-[500px] overflow-hidden rounded-lg border bg-background shadow-xl">
+                                    <div className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2">
+                                        <div className="h-3 w-3 rounded-full bg-red-500" />
+                                        <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                                        <div className="h-3 w-3 rounded-full bg-green-500" />
+                                        <div className="ml-2 text-xs text-muted-foreground">rain.gg</div>
+                                    </div>
+                                    <div className="relative aspect-[16/9] bg-black">
+                                        <Image
+                                            src="/placeholder.svg?height=450&width=800"
+                                            alt="OddsViewer Chrome extension showing odds on Rain.gg"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                            True Odds: 32.7%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="donate" className="py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                            <div className="space-y-2">
+                                <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                    Support The Project
+                                </div>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Help Us Keep OddsViewer Free</h2>
+                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                    OddsViewer is completely free and open source. Your donations help us maintain and improve the
+                                    extension.
+                                </p>
+                            </div>
+                            <div className="w-full max-w-sm space-y-2">
+                                <div className="grid grid-cols-3 gap-2">
+                                    <Button variant="outline" className="w-full">
+                                        $5
+                                    </Button>
+                                    <Button variant="outline" className="w-full">
+                                        $10
+                                    </Button>
+                                    <Button variant="outline" className="w-full">
+                                        $25
+                                    </Button>
+                                </div>
+                                <Button className="w-full bg-purple-500 hover:bg-purple-600">
+                                    <DollarSign className="mr-2 h-4 w-4" />
+                                    Donate Now
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="border-t bg-muted/50 py-12">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="grid gap-8 lg:grid-cols-2">
+                            <div className="flex flex-col justify-center space-y-4">
+                                <div className="space-y-2">
+                                    <h2 className="text-3xl font-bold tracking-tighter">Ready to see the real odds?</h2>
+                                    <p className="text-muted-foreground md:text-xl">
+                                        Download OddsViewer now and start making more informed gambling decisions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-start gap-4 lg:justify-end">
+                                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                                    <Link href="#download">
+                                        <Button size="lg" className="bg-purple-500 hover:bg-purple-600">
+                                            <Download className="mr-2 h-5 w-5" />
+                                            Download Extension
+                                        </Button>
+                                    </Link>
+                                    <Link href="https://github.com/oddsviewer/extension" target="_blank" rel="noopener noreferrer">
+                                        <Button variant="outline" size="lg">
+                                            <Github className="mr-2 h-5 w-5" />
+                                            View on GitHub
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer className="border-t py-6 md:py-0">
+                <div className="container mx-auto max-w-7xl flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+                    <div className="flex items-center gap-2">
+                        <Eye className="h-5 w-5 text-purple-500" />
+                        <p className="text-sm font-medium">OddsAware &copy; {new Date().getFullYear()}</p>
+                    </div>
+                    <div className="flex gap-4">
+                        <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                            Privacy Policy
+                        </Link>
+                        <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                            Terms of Service
+                        </Link>
+                        <Link
+                            href="https://github.com/oddsviewer/extension"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium hover:underline underline-offset-4"
+                        >
+                            GitHub
+                        </Link>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    )
 }
