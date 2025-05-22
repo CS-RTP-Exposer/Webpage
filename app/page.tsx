@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button"
 export default function LandingPage() {
     return (
         <div className="flex min-h-screen flex-col">
-            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="container flex h-16 items-center justify-between">
+            <header className="sticky mx-auto top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <div className="container flex mx-auto px-2 md:px-0 h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Eye className="h-6 w-6 text-purple-500" />
                         <span className="text-xl font-bold">OddsAware</span>
                     </div>
-                    <nav className="hidden md:flex gap-6">
+                    <nav className="hidden md:flex mx-auto gap-6">
                         <Link href="#features" className="text-sm font-medium hover:text-purple-500 transition-colors">
                             Features
                         </Link>
@@ -111,7 +111,7 @@ export default function LandingPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                        <div className="mx-auto grid max-w-5xl items-center gap-6 pt-12 lg:grid-cols-3 lg:gap-12">
                             <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
                                 <div className="rounded-full bg-purple-500/10 p-3">
                                     <Eye className="h-6 w-6 text-purple-500" />
@@ -156,7 +156,7 @@ export default function LandingPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2">
+                        <div className="mx-auto grid max-w-5xl gap-6 pt-12 md:grid-cols-2">
                             <div className="flex flex-col space-y-4 rounded-lg border bg-background p-6 shadow-sm">
                                 <div className="flex items-center gap-2">
                                     <div className="rounded-full bg-purple-500/10 p-2">
