@@ -288,7 +288,7 @@ export default function LandingPage() {
 
                 <section id="getting-started" className="py-20">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
-                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+                        <div className="grid gap-2 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
                             <div className="flex items-center justify-center">
                                 <div className="space-y-4">
                                     <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
@@ -307,7 +307,7 @@ export default function LandingPage() {
                                             <div>
                                                 <h3 className="font-bold">Install the Extension</h3>
                                                 <p className="text-muted-foreground">
-                                                    Download and install OddsViewer from our website or the Chrome Web Store.
+                                                    Download the extension from the Chrome Web Store.
                                                 </p>
                                             </div>
                                         </li>
@@ -333,7 +333,7 @@ export default function LandingPage() {
                                             <div>
                                                 <h3 className="font-bold">See Real Odds</h3>
                                                 <p className="text-muted-foreground">
-                                                    OddsViewer automatically displays the true odds directly on the page.
+                                                    Automatically get access to the actual odds of winning as you play.
                                                 </p>
                                             </div>
                                         </li>
@@ -346,7 +346,7 @@ export default function LandingPage() {
                                             <div>
                                                 <h3 className="font-bold">Make Better Decisions</h3>
                                                 <p className="text-muted-foreground">
-                                                    Use the real odds information to make more informed gambling decisions.
+                                                    Make more informed gambling decisions based on real data.
                                                 </p>
                                             </div>
                                         </li>
