@@ -67,12 +67,12 @@ export default function LandingPage() {
                                         <div className="h-3 w-3 rounded-full bg-green-500" />
                                         <div className="ml-2 text-xs text-muted-foreground">csgoroll.com</div>
                                     </div>
-                                    <div className="relative aspect-[16/9] bg-black">
+                                    <div className="relative aspect-[16/9] bg-black overflow-visible">
                                         <Image
-                                            src="/placeholder.svg?height=450&width=800"
+                                            src="/skeleton-roll.png"
                                             alt="OddsViewer Chrome extension showing odds on a gambling site"
                                             fill
-                                            className="object-cover"
+                                            className="object-cover blur-sm"
                                         />
                                         <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 48.2%
@@ -371,10 +371,10 @@ export default function LandingPage() {
                                     </div>
                                     <div className="relative aspect-[16/9] bg-black">
                                         <Image
-                                            src="/placeholder.svg?height=450&width=800"
+                                            src="/skeleton-rain.png"
                                             alt="OddsViewer Chrome extension showing odds on Rain.gg"
                                             fill
-                                            className="object-cover"
+                                            className="object-cover blur-sm"
                                         />
                                         <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 32.7%
