@@ -149,34 +149,36 @@ export default function LandingPage() {
 
                             {/* Logos Row */}
                             <div className="flex items-center gap-8">
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
-                                        src="/placeholder.svg?height=64&width=64"
+                                        src="/csgoroll.jpg"
                                         alt="CSGORoll logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full"
+                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
                                     />
                                 </div>
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
-                                        src="/placeholder.svg?height=64&width=64"
+                                        src="/rain.jpg"
                                         alt="Rain.gg logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full"
+                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
                                     />
                                 </div>
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
-                                        src="/placeholder.svg?height=64&width=64"
+                                        src="/gem.jpg"
                                         alt="CSGOGem logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full"
+                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
                                     />
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </section>
