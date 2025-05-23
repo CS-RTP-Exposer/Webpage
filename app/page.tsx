@@ -74,7 +74,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-150 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-125 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 48.2%
                                         </div>
                                     </div>
@@ -151,29 +151,29 @@ export default function LandingPage() {
                             <div className="flex items-center gap-4">
                                 <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
-                                        src="/csgoroll.jpg"
+                                        src="/csgoroll.svg"
                                         alt="CSGORoll logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
+                                        className="transition-transform duration-200 group-hover:scale-125"
                                     />
                                 </div>
                                 <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
-                                        src="/rain.jpg"
+                                        src="/rain.svg"
                                         alt="Rain.gg logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
+                                        className="transition-transform duration-200 group-hover:scale-125"
                                     />
                                 </div>
-                                <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
+                                <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer group">
                                     <Image
-                                        src="/gem.jpg"
+                                        src="/gem.svg"
                                         alt="CSGOGem logo"
                                         width={64}
                                         height={64}
-                                        className="rounded-full transition-transform duration-200 group-hover:scale-105"
+                                        className="rounded-full transition-transform duration-200 group-hover:scale-125"
                                     />
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-150 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-125 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 32.7%
                                         </div>
                                     </div>
