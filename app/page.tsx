@@ -1,10 +1,36 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
+import NumberFlow from '@number-flow/react'
 import { Download, DollarSign, Eye, ArrowRight, Github, Puzzle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 export default function LandingPage() {
+
+    const [rtp, setRtp] = useState(0);
+    const [percent, setPercent] = useState(0);
+    const [multiplier, setMultiplier] = useState(0);
+
+    const { ref: percentRef, inView: percentInView } = useInView({
+        onChange: (inView) => {
+            if (inView) setPercent(0.32);
+        }
+    });
+    const { ref: multiplierRef, inView: multiplierInView } = useInView({
+        onChange: (inView) => {
+            if (inView) setMultiplier(2.1);
+        }
+    });
+    const { ref: rtpRef, inView: rtpInView } = useInView({
+        onChange: (inView) => {
+            if (inView) setRtp(67);
+        }
+    });
+
     return (
         <div className="flex min-h-screen flex-col">
             <header className="sticky mx-auto top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -177,8 +203,6 @@ export default function LandingPage() {
                                     />
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </section>
@@ -230,15 +254,22 @@ export default function LandingPage() {
                                         <span className="text-sm font-medium">Items scanned</span>
                                         <span className="text-sm font-medium">RTP calculated</span>
                                     </div>
-                                    <div className="mt-2 h-2.5 w-full rounded-full bg-muted-foreground/20">
-                                        <div className="h-2.5 rounded-full bg-purple-500" style={{ width: "67%" }}></div>
+                                    <div
+                                        className="mt-2 h-2.5 w-full rounded-full bg-muted-foreground/20"
+                                        ref={rtpRef}
+                                    >
+                                        <div
+                                            className="h-2.5 rounded-full bg-purple-500 transition-all duration-700 ease-out"
+                                            style={{ width: `${rtp}%` }}
+                                        ></div>
                                     </div>
                                     <div className="mt-1 flex items-center justify-between">
                                         <span className="text-xs text-muted-foreground">0%</span>
-                                        <span className="text-xs font-medium text-purple-500">67% RTP</span>
+                                        <span className="text-xs font-medium text-purple-500">{rtp}% RTP</span>
                                         <span className="text-xs text-muted-foreground">100%</span>
                                     </div>
                                 </div>
+
                             </div>
                             <div className="flex flex-col space-y-4 rounded-lg border bg-background p-6 shadow-sm">
                                 <div className="flex items-center gap-2">
@@ -272,12 +303,12 @@ export default function LandingPage() {
                                     making a profit. This helps you make informed decisions about which games offer the best value.
                                 </p>
                                 <div className="mt-4 grid grid-cols-2 gap-4">
-                                    <div className="rounded-md bg-muted p-3 text-center">
-                                        <div className="text-2xl font-bold text-purple-500">32%</div>
+                                    <div className="rounded-md bg-muted p-3 text-center" ref={percentRef}>
+                                        <div className="text-2xl font-bold text-purple-500"><NumberFlow value={percent} format={{ style: 'percent' }} /></div>
                                         <div className="text-xs text-muted-foreground">Win Probability</div>
                                     </div>
-                                    <div className="rounded-md bg-muted p-3 text-center">
-                                        <div className="text-2xl font-bold text-purple-500">2.1x</div>
+                                    <div className="rounded-md bg-muted p-3 text-center" ref={multiplierRef}>
+                                        <div className="text-2xl font-bold text-purple-500"><NumberFlow value={multiplier} format={{ style: 'decimal' }} />x</div>
                                         <div className="text-xs text-muted-foreground">Avg. Multiplier</div>
                                     </div>
                                 </div>
