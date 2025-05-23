@@ -133,7 +133,7 @@ export default function LandingPage() {
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
                             {/* Text Section */}
-                            <div className="md:w-1/2 space-y-4">
+                            <div className="md:w-4/6 space-y-4">
                                 <div className="space-y-2">
                                     <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
                                         Supported Sites
@@ -141,14 +141,14 @@ export default function LandingPage() {
                                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                                         Works With Your Favorite Sites
                                     </h2>
-                                    <p className="max-w-[500px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                    <p className="max-w-[90%] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                         OddsViewer is currently in very early development, but we already support a few popular gambling sites. We are actively working on adding more sites and features to help you make informed decisions.
                                     </p>
                                 </div>
                             </div>
 
                             {/* Logos Row */}
-                            <div className="flex items-center gap-8">
+                            <div className="flex items-center gap-4">
                                 <div className="group h-16 w-16 rounded-full bg-muted flex items-center justify-center cursor-pointer">
                                     <Image
                                         src="/csgoroll.jpg"
@@ -295,7 +295,7 @@ export default function LandingPage() {
                                         Getting Started
                                     </div>
                                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                        Simple, Transparent, Effective
+                                        Real Odds in Just a Few Clicks
                                     </h2>
                                     <ul className="space-y-4">
                                         <li className="flex items-start gap-2">
@@ -386,7 +386,7 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section id="donate" className="bg-muted py-20">
+                <section id="donate" className="bg-muted py-12">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
@@ -420,34 +420,6 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section className="py-12">
-                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
-                        <div className="">
-                            <div className="flex flex-col justify-center space-y-4 text-center">
-                                <div className="space-y-2">
-                                    <h2 className="text-3xl font-bold tracking-tighter">Ready to see the real odds?</h2>
-                                    <p className="text-muted-foreground md:text-xl">
-                                        Download OddsViewer now and start making more informed gambling decisions.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col justify-center gap-2 min-[400px]:flex-row">
-                                    <Link href="#download">
-                                        <Button size="lg" className="bg-purple-500 hover:bg-purple-600">
-                                            <Download className="mr-2 h-5 w-5" />
-                                            Download Extension
-                                        </Button>
-                                    </Link>
-                                    <Link href="https://github.com/oddsviewer/extension" target="_blank" rel="noopener noreferrer">
-                                        <Button variant="outline" size="lg">
-                                            <Github className="mr-2 h-5 w-5" />
-                                            View on GitHub
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </main>
             <footer className="border-t py-6 md:py-0">
                 <div className="container mx-auto max-w-7xl flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
