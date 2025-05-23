@@ -15,17 +15,17 @@ export default function LandingPage() {
     const [percent, setPercent] = useState(0);
     const [multiplier, setMultiplier] = useState(0);
 
-    const { ref: percentRef, inView: percentInView } = useInView({
+    const { ref: percentRef } = useInView({
         onChange: (inView) => {
             if (inView) setPercent(0.32);
         }
     });
-    const { ref: multiplierRef, inView: multiplierInView } = useInView({
+    const { ref: multiplierRef } = useInView({
         onChange: (inView) => {
             if (inView) setMultiplier(2.1);
         }
     });
-    const { ref: rtpRef, inView: rtpInView } = useInView({
+    const { ref: rtpRef } = useInView({
         onChange: (inView) => {
             if (inView) setRtp(67);
         }
@@ -100,7 +100,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-125 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 48.2%
                                         </div>
                                     </div>
@@ -407,7 +407,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-125 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 32.7%
                                         </div>
                                     </div>
@@ -433,13 +433,13 @@ export default function LandingPage() {
                             <div className="w-full max-w-sm space-y-2">
                                 <div className="grid grid-cols-3 gap-2">
                                     <Button variant="outline" className="w-full">
+                                        $1
+                                    </Button>
+                                    <Button variant="outline" className="w-full">
+                                        $2
+                                    </Button>
+                                    <Button variant="outline" className="w-full">
                                         $5
-                                    </Button>
-                                    <Button variant="outline" className="w-full">
-                                        $10
-                                    </Button>
-                                    <Button variant="outline" className="w-full">
-                                        $25
                                     </Button>
                                 </div>
                                 <Button className="w-full bg-purple-500 hover:bg-purple-600">
