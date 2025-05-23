@@ -50,7 +50,7 @@ export default function LandingPage() {
                                             Download Extension
                                         </Button>
                                     </Link>
-                                    <Link href="https://github.com/oddsviewer/extension" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://github.com/CS-RTP-Exposer/oddsaware-extension" target="_blank" rel="noopener noreferrer">
                                         <Button variant="outline" size="lg">
                                             <Github className="mr-2 h-5 w-5" />
                                             View on GitHub
@@ -74,7 +74,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-150 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 48.2%
                                         </div>
                                     </div>
@@ -376,7 +376,7 @@ export default function LandingPage() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
+                                        <div className="absolute cursor-default transform transition duration-300 hover:scale-150 hover:-translate-x-6 bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 32.7%
                                         </div>
                                     </div>
@@ -435,7 +435,7 @@ export default function LandingPage() {
                             Terms of Service
                         </Link>
                         <Link
-                            href="https://github.com/oddsviewer/extension"
+                            href="https://github.com/CS-RTP-Exposer/oddsaware-extension"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm font-medium hover:underline underline-offset-4"
