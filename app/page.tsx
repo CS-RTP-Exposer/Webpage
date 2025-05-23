@@ -72,7 +72,7 @@ export default function LandingPage() {
                                             src="/skeleton-roll.png"
                                             alt="OddsViewer Chrome extension showing odds on a gambling site"
                                             fill
-                                            className="object-cover blur-sm"
+                                            className="object-cover"
                                         />
                                         <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 48.2%
@@ -374,7 +374,7 @@ export default function LandingPage() {
                                             src="/skeleton-rain.png"
                                             alt="OddsViewer Chrome extension showing odds on Rain.gg"
                                             fill
-                                            className="object-cover blur-sm"
+                                            className="object-cover"
                                         />
                                         <div className="absolute bottom-4 right-4 rounded-md bg-purple-500 px-2 py-1 text-xs font-medium text-white shadow-lg">
                                             True Odds: 32.7%
