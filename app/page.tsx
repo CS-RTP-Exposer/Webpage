@@ -8,7 +8,7 @@ export default function LandingPage() {
     return (
         <div className="flex min-h-screen flex-col">
             <header className="sticky mx-auto top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="container flex mx-auto px-2 md:px-0 h-16 items-center justify-between">
+                <div className="container flex mx-auto px-4 md:px-6 h-16 items-center justify-between max-w-7xl">
                     <div className="flex items-center gap-2">
                         <Eye className="h-6 w-6 text-purple-500" />
                         <span className="text-xl font-bold">OddsAware</span>
@@ -73,7 +73,7 @@ export default function LandingPage() {
                                 </div>
                                 <div className="text-sm text-muted-foreground">Free and open source. No registration required.</div>
                             </div>
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-end">
                                 <div className="relative w-full max-w-[500px] overflow-hidden rounded-lg border bg-background shadow-xl">
                                     <div className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
