@@ -13,20 +13,6 @@ export default function LandingPage() {
                         <Eye className="h-6 w-6 text-purple-500" />
                         <span className="text-xl font-bold">OddsAware</span>
                     </div>
-                    <nav className="hidden md:flex mx-auto gap-6">
-                        <Link href="#features" className="text-sm font-medium hover:text-purple-500 transition-colors">
-                            Features
-                        </Link>
-                        <Link href="#sites" className="text-sm font-medium hover:text-purple-500 transition-colors">
-                            Supported Sites
-                        </Link>
-                        <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-500 transition-colors">
-                            How It Works
-                        </Link>
-                        <Link href="#getting-started" className="text-sm font-medium hover:text-purple-500 transition-colors">
-                            Getting Started
-                        </Link>
-                    </nav>
                     <div className="flex items-center gap-4">
                         <Link href="#donate">
                             <Button variant="outline" size="sm" className="hidden md:flex">
@@ -143,7 +129,60 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section className="py-20">
+                <section id="sites" className="py-20">
+                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+                            {/* Text Section */}
+                            <div className="md:w-1/2 space-y-4">
+                                <div className="space-y-2">
+                                    <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
+                                        Supported Sites
+                                    </div>
+                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                                        Works With Your Favorite Sites
+                                    </h2>
+                                    <p className="max-w-[500px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                        OddsViewer is currently in very early development, but we already support a few popular gambling sites. We are actively working on adding more sites and features to help you make informed decisions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Logos Row */}
+                            <div className="flex items-center gap-8">
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="CSGORoll logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="Rain.gg logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
+                                    <Image
+                                        src="/placeholder.svg?height=64&width=64"
+                                        alt="CSGOGem logo"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="bg-muted py-20">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
@@ -245,77 +284,7 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section id="sites" className="pb-20">
-                    <div className="container mx-auto max-w-7xl px-4 md:px-6">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-purple-500">
-                                    Supported Sites
-                                </div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Works With Your Favorite Sites</h2>
-                                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    OddsViewer currently supports these popular gambling sites, with more coming soon.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-3">
-                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
-                                    <Image
-                                        src="/placeholder.svg?height=64&width=64"
-                                        alt="CSGORoll logo"
-                                        width={64}
-                                        height={64}
-                                        className="rounded-full"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-bold">CSGORoll</h3>
-                                <p className="text-center text-muted-foreground">
-                                    Full support for all games including Crash, Roulette, and Case Battles.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
-                                    <Image
-                                        src="/placeholder.svg?height=64&width=64"
-                                        alt="Rain.gg logo"
-                                        width={64}
-                                        height={64}
-                                        className="rounded-full"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-bold">Rain.gg</h3>
-                                <p className="text-center text-muted-foreground">
-                                    Supports all Rain.gg games with detailed odds breakdowns.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center space-y-4 rounded-lg border bg-background p-6 shadow-sm">
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
-                                    <Image
-                                        src="/placeholder.svg?height=64&width=64"
-                                        alt="CSGOGem logo"
-                                        width={64}
-                                        height={64}
-                                        className="rounded-full"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-bold">CSGOGem</h3>
-                                <p className="text-center text-muted-foreground">
-                                    Full integration with all CSGOGem gambling features.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex justify-center">
-                            <div className="rounded-lg border bg-background p-4 text-center">
-                                <p className="text-muted-foreground">
-                                    <span className="font-medium">Coming soon:</span> DuelBits, CSGOEmpire, Rollbit, and more!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="getting-started" className="bg-muted py-20">
+                <section id="getting-started" className="py-20">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
                         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
                             <div className="flex items-center justify-center">
@@ -390,7 +359,7 @@ export default function LandingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-end">
                                 <div className="relative w-full max-w-[500px] overflow-hidden rounded-lg border bg-background shadow-xl">
                                     <div className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -415,7 +384,7 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section id="donate" className="py-20">
+                <section id="donate" className="bg-muted py-20">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
@@ -449,19 +418,17 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                <section className="border-t bg-muted/50 py-12">
+                <section className="py-12">
                     <div className="container mx-auto max-w-7xl px-4 md:px-6">
-                        <div className="grid gap-8 lg:grid-cols-2">
-                            <div className="flex flex-col justify-center space-y-4">
+                        <div className="">
+                            <div className="flex flex-col justify-center space-y-4 text-center">
                                 <div className="space-y-2">
                                     <h2 className="text-3xl font-bold tracking-tighter">Ready to see the real odds?</h2>
                                     <p className="text-muted-foreground md:text-xl">
                                         Download OddsViewer now and start making more informed gambling decisions.
                                     </p>
                                 </div>
-                            </div>
-                            <div className="flex flex-col items-start gap-4 lg:justify-end">
-                                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                                <div className="flex flex-col justify-center gap-2 min-[400px]:flex-row">
                                     <Link href="#download">
                                         <Button size="lg" className="bg-purple-500 hover:bg-purple-600">
                                             <Download className="mr-2 h-5 w-5" />
@@ -504,6 +471,6 @@ export default function LandingPage() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </div >
     )
 }
