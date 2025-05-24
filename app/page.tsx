@@ -392,7 +392,7 @@ export default function LandingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex items-center justify-end">
+                            <div className="hidden md:flex items-center justify-end">
                                 <div className="relative w-full max-w-[500px] overflow-hidden rounded-lg border bg-background shadow-xl">
                                     <div className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
