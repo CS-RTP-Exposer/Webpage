@@ -482,8 +482,8 @@ export default function LandingPage() {
                 </footer>
             </div>
             {showPopup && (
-                <div className="fixed bottom-4 left-4 z-50">
-                    <div className="bg-white dark:bg-zinc-900 rounded-lg p-6 max-w-md shadow-xl">
+                <div className="fixed bottom-4 left-4 right-4 z-50">
+                    <div className="bg-white dark:bg-zinc-900 rounded-lg p-6 w-[100%] md:max-w-md shadow-2xl">
                         <h2 className="text-xl font-bold mb-2 text-purple-600">This is not a gambling tool</h2>
                         <p className="text-sm text-muted-foreground mb-4">
                             Gambling is, and always will be, a game where the odds are against you.
