@@ -303,7 +303,7 @@ export default function LandingPage() {
                                     </div>
                                     <p className="text-muted-foreground">
                                         We combine the odds of winning with the average multiplier you can expect to show your real chance of
-                                        making a profit. This helps you make informed decisions about which games offer the best value.
+                                        making a profit. This helps you make informed decisions about which games offer the best chance at winning.
                                     </p>
                                     <div className="mt-4 grid grid-cols-2 gap-4">
                                         <div className="rounded-md bg-muted p-3 text-center" ref={percentRef}>
@@ -420,7 +420,8 @@ export default function LandingPage() {
                         </div>
                     </section>
 
-                    <section id="donate" className="bg-muted py-12">
+                    {/* Donation Section (implement later) */}
+                    {/* <section id="donate" className="bg-muted py-12">
                         <div className="container mx-auto max-w-7xl px-4 md:px-6">
                             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                                 <div className="space-y-2">
@@ -452,7 +453,7 @@ export default function LandingPage() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                 </main>
                 <footer className="border-t py-6 md:py-0">
