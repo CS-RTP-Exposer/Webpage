@@ -43,12 +43,12 @@ export default function LandingPage() {
                             <span className="text-xl font-bold">OddsAware</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <Link href="#donate">
+                            {/* <Link href="#donate">
                                 <Button variant="outline" size="sm" className="hidden md:flex">
                                     <DollarSign className="mr-2 h-4 w-4" />
                                     Donate
                                 </Button>
-                            </Link>
+                            </Link> */}
                             <Link href="#download">
                                 <Button size="sm" className="bg-purple-500 hover:bg-purple-600">
                                     <Download className="mr-2 h-4 w-4" />
